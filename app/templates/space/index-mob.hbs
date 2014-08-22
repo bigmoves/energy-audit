@@ -1,0 +1,35 @@
+<div class="equipment-summary">
+  <h4>
+    Space
+    <span class="name">#{{model.name}}</span>
+  </h4>
+</div>
+<div class="properties-list">
+  <ul>
+    <li>
+      <b>Area:</b>
+      <code>{{model.area}} sq.ft.</code>
+    </li>
+  </ul>
+</div>
+<hr>
+{{#if model.comments}}
+  {{#each model.comments}}
+    <div class="comment clearfix">
+      <div class="header">
+        <div class="avatar">
+          {{gravatar-image user.email size=40}}
+        </div>
+        <span class="user">{{user.name}} commented...</span>
+        <span class="date">{{moment-date createdAt fromNow=true}}</span>
+      </div>
+      {{body}}
+    </div>
+  {{/each}}
+{{/if}}
+{{textarea class="form-control" rows="4" placeholder="Add a comment..." value=comment}}
+<br>
+<button type="button" class="btn btn-default btn-lg btn-block"><i class="fa fa-paperclip"></i> Attach a file</button>
+<button type="button" class="btn btn-success btn-lg btn-block" {{action "addComment" comment}}>Add this comment</button>
+<hr>
+{{link-to 'Edit properties' 'space.edit' this class="btn btn-default btn-lg btn-block"}}

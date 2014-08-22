@@ -1,0 +1,13 @@
+<h4>Files</h4>
+{{link-to 'Add a file' 'attachments.upload' class="btn btn-default btn-lg btn-block"}}
+<div class="items-list">
+  <ul>
+    {{#each}}
+      <li>
+        {{file-preview this size="40"}}
+        <a href="{{unbound url}}">{{filename}}</a> {{size}} KB
+        <span class="uploaded-on">Uploaded {{moment-date createdAt fromNow=true}} by {{user.name}}</span>
+      </li>
+    {{/each}}
+  </ul>
+</div>

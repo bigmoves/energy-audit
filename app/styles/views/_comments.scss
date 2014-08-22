@@ -1,0 +1,19 @@
+.comment {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  .avatar {
+    float: left;
+    margin-right: 5px;
+  }
+  .header {
+    padding: 5px 0;
+    .user {
+      display: block;
+      font-weight: bold;
+    }
+    .date {
+      display: block;
+    }
+  }
+}

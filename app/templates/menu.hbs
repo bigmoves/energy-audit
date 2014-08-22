@@ -1,0 +1,18 @@
+<header class="building-header">
+  <button type="button" class="btn btn-default btn-sm pull-right" {{action "showMenu"}}>
+    <i class="fa fa-bars fa-lg"></i>
+  </button>
+  <h1>{{building.name}}</h1>
+  <h2>{{building.description}}</h2>
+</header>
+
+{{#if showMenu}}
+  <div class="nav-menu">
+    {{link-to 'Dashboard' 'building.index'}}
+    {{link-to 'Location' 'building.map'}}
+    {{link-to 'Spaces' 'spaces.index'}}
+    {{link-to 'Equipment' 'equipments.index'}}
+    {{link-to 'Files' 'attachments.index'}}
+    {{link-to 'Settings' 'building.edit'}}
+  </div>
+{{/if}}

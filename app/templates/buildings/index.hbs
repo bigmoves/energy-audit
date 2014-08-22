@@ -1,0 +1,33 @@
+<div class="site-container">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="https://avatars3.githubusercontent.com/u/3190894?s=460"
+      height=230 class="img-rounded">
+      <h1 class="user-info">
+        <span class="fullname">Chad Miller</span>
+        <span class="username">chadtmiller</span>
+      </h1>
+      <hr>
+    </div>
+    <div class="col-md-9">
+      <div class="filter-bar">
+        {{link-to "New" "buildings.new" class="btn btn-success pull-right"}}
+        <form>
+          <div class="col-xs-4">
+            {{input type="text" class="form-control" placeholder="Find a building..."}}
+          </div>
+          {{input type="submit" class="btn btn-default" value="search"}}
+        </form>
+      </div>
+      <div class="list-group">
+        {{#each}}
+          {{#link-to 'building' this class="list-group-item"}}
+            <span class="building-area pull-right">{{area}} sq.ft.</span>
+            <h4 class="list-group-item-heading">{{name}}</h4>
+            <p class="list-group-item-text">{{city}}, {{state}}</p>
+          {{/link-to}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

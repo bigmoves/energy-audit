@@ -1,0 +1,22 @@
+export default [
+  {name: "Bank branch"},
+  {name: "Barracks"},
+  {name: "Financial office"},
+  {name: "K-12 school"},
+  {name: "Supermarket/grocery store"},
+  {name: "Wholesale club/supercenter"},
+  {name: "Hopsital (general medical and surgical)"},
+  {name: "Medical office"},
+  {name: "Senior care facility"},
+  {name: "Hotel"},
+  {name: "Residence hall/dormitory"},
+  {name: "Office"},
+  {name: "Courthouse"},
+  {name: "Wastewater treatment plant"},
+  {name: "Worship facility"},
+  {name: "Retail store"},
+  {name: "Data center"},
+  {name: "Distribution center"},
+  {name: "Non-refrigerated warehouse"},
+  {name: "Refrigerated warehouse"}
+];

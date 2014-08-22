@@ -1,0 +1,43 @@
+<div class="new-building-container">
+  <table class="section-list">
+    <thead>
+      <tr>
+        <th>Create a building</th>
+      </tr>
+      <tr>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Building name</td>
+        <td>{{input type="text" class="table-control right-align" value=name}}<td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td>{{input type="text" class="table-control right-align" value=description}}</td>
+      </tr>
+      <tr>
+        <td>Space type</td>
+        <td>{{input type="text" class="table-control right-align" value=spaceType}}</td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>{{input type="text" class="table-control right-align" value=address}}</td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td>{{input type="text" class="table-control right-align" value=city}}</td>
+      </tr>
+      <tr>
+        <td>State</td>
+        <td>{{input type="text" class="table-control right-align" value=state}}</td>
+      </tr>
+      <tr>
+        <td>Zipcode</td>
+        <td>{{input type="text" class="table-control right-align" value=zipcode}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="submit" class="btn btn-success" {{action "submit" this}}>Create building</button>
+</div>

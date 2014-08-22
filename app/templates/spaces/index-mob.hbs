@@ -1,0 +1,13 @@
+<h4>Spaces</h4>
+{{link-to 'Add a space' 'spaces.new' class="btn btn-default btn-lg btn-block"}}
+<div class="items-list">
+  <ul>
+    {{#each}}
+      <li>
+        {{#link-to 'space.index' this}}
+          {{name}}
+        {{/link-to}}
+      </li>
+    {{/each}}
+  </ul>
+</div>

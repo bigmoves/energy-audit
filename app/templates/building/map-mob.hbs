@@ -1,0 +1,10 @@
+<br>
+<button type="button" class="btn btn-default btn-lg btn-block">Check In</button>
+<hr>
+<div class="map-container" style="margin-bottom:15px;">
+  {{google-map zipcode=model.zipcode}}
+</div>
+<address>
+  {{model.address}}<br>
+  {{model.city}}, {{model.state}} {{model.zipcode}}<br>
+</address>

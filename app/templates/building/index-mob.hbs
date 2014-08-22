@@ -1,0 +1,15 @@
+<h4>Latest Updates</h4>
+{{#each model.events}}
+  <div class="comment clearfix">
+    <div class="header">
+      <div class="avatar">
+        {{gravatar-image user.email size=40}}
+      </div>
+      <span class="user">
+        {{user.name}} {{format-type type}}
+      </span>
+      <a href="#" {{action 'transitionToEvent' this}}>{{ref.name}}</a>
+      <span class="date">{{moment-date createdAt fromNow=true}}</span>
+    </div>
+  </div>
+{{/each}}

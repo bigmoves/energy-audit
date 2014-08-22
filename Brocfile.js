@@ -6,8 +6,12 @@ var app = new EmberApp();
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
+app.import('vendor/ember-data/ember-data.js');
+app.import('vendor/spin.js/spin.js');
+app.import('vendor/blueimp-md5/js/md5.js');
+app.import('vendor/moment/moment.js');
 //
-// If you need to use different assets in different
+// If you need to us  e different assets in different
 // environments, specify an object as the first parameter. That
 // object's keys should be the environment name and the values
 // should be the asset to use in that environment.

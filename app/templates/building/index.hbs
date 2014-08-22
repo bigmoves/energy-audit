@@ -1,0 +1,66 @@
+<div class="site-container">
+  <div class="equipment-summary">
+    <h4>
+      Equipment
+      <span class="name">{{model.name}}</span>
+    </h4>
+  </div>
+  <div class="equipment-content">
+    <div class="section" style="width: 400px;">
+      <table id="section-list">
+        <thead>
+          <tr>
+            <th>Attributes</th>
+            <th>
+              {{#if model.isDirty}}
+                <button class="btn btn-default btn-xs pull-right">Update</button>
+              {{/if}}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name">Name</td>
+            <td>{{input type="text" class="table-control right-align" value=model.name}}</td>
+          <tr>
+          <tr>
+            <td class="name">Serves</td>
+            <td>{{model.space.name}}</td>
+          <tr>
+          <tr>
+            <td class="name">Location</td>
+            <td>{{input type="text" class="table-control right-align" value=model.location}}</td>
+          <tr>
+          <tr>
+            <td class="name">Manufacturer</td>
+            <td>{{input type="text" class="table-control right-align" value=model.manufacturer}}</td>
+          <tr>
+          <tr>
+            <td class="name">Model#</td>
+            <td>{{input type="text" class="table-control right-align" value=model.modelNumber}}</td>
+          <tr>
+          <tr>
+            <td class="name">Serial#</td>
+            <td>{{input type="text" class="table-control right-align" value=model.serialNumber}}</td>
+          <tr>
+          <tr>
+            <td class="name">Size</td>
+            <td>{{input type="text" class="table-control right-align" value=model.size}}</td>
+          <tr>
+          <tr>
+            <td class="name">Quantity</td>
+            <td>{{input type="text" class="table-control right-align" value=model.quantity}}</td>
+          <tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>Files <small class="upload-file"><a href="#">Upload</a></small></h4>
+    <ul>
+    {{#each file in model.files}}
+      <li><a href="{{unbound file.url}}">{{file.name}}</a> [{{file.type}}]</li>
+    {{/each}}
+    </ul>
+    <h4>Notes</h4>
+  </div>
+</div>

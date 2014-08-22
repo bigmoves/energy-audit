@@ -1,0 +1,16 @@
+<header class="nav-bar clearfix">
+  <div class="inner">
+    {{#unless isLoggedOut}}
+      {{#if canGoBack}}
+        <div class="back-label pull-left" {{action "goBack" backLabel}}>
+          <i class="fa fa-arrow-circle-left fa-lg"></i> <b>{{backLabel}}</b>
+        </div>
+      {{else}}
+        {{#link-to 'buildings.new' class="header-button context-button"}}
+          <i class="fa fa-pencil fa-lg"></i>
+        {{/link-to}}
+      {{/if}}
+      <span class="pull-right">{{currentUser.name}}</span>
+    {{/unless}}
+  </div>
+</header>

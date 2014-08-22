@@ -1,0 +1,13 @@
+<h4>Equipment</h4>
+{{link-to 'Add new eqiupment' 'equipments.new' class="btn btn-default btn-lg btn-block"}}
+<div class="items-list">
+  <ul>
+    {{#each}}
+      <li>
+        {{#link-to 'equipment.index' this}}
+          {{name}}
+        {{/link-to}}
+      </li>
+    {{/each}}
+  </ul>
+</div>
